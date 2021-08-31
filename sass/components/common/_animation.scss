@@ -1,0 +1,102 @@
+/*common_animation*/
+.upper-line {
+  &__link {
+    @extend %color;
+  }
+}
+
+.footer {
+  &__link {
+    @extend %color;
+  }
+}
+
+.cap {
+  &__order-btn {
+    @extend %background-color;
+  }
+}
+
+.team-card {
+  &__social-icon {
+    @extend %fill;
+  }
+}
+
+.social-icons {
+  &__icon {
+    @extend %background-color;
+  }
+}
+
+.company-label {
+  @extend %border-color;
+  &__icon {
+    @extend %fill;
+  }
+}
+
+.subscribe-form {
+  &__email {
+    @extend %border-color;
+    &::placeholder {
+      @extend %color;
+    }
+  }
+
+  &__btn {
+    @extend %background-color;
+  }
+}
+
+.backdrop {
+  @extend %backdrop;
+}
+
+.contact-form {
+  &__send-btn {
+    @extend %background-color;
+  }
+
+  &__close-icon {
+    @extend %fill;
+  }
+}
+
+.form-field {
+  &__input {
+    @extend %border-color;
+  }
+
+  &__form-icon {
+    @extend %fill;
+  }
+
+  &__comment {
+    @extend %border-color;
+    &::placeholder {
+      @extend %color;
+    }
+  }
+}
+
+.check-block {
+  &__checked-icon,
+  &__unchecked-icon {
+    @extend %fill;
+  }
+}
+
+.filters {
+  &__filter-btn {
+    @extend %filter-btn-anim;
+  }
+}
+
+.portfolio-card {
+  @extend %box-shadow;
+}
+
+.overlay {
+  @extend %overlay;
+}
