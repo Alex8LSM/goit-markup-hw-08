@@ -19,46 +19,55 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .container {
-  width: 1200px;
+
+  max-width: $mobile;
   padding: 0px 15px;
   margin: 0 auto;
+  
+  outline: 1px solid orange;
 }
 
-.list-box {
-  display: flex;
-}
-
-.our-features,
-.team-card,
-.contact-form,
-.portfolio-card {
-  &__title {
-    color: $pri-title;
+@media screen and (min-width: $desktop){
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
-}
 
-.input,
-.comment,
-.email {
-  &:hover {
-    cursor: pointer;
+  .container {
+    max-width: 1200px;
   }
-}
 
-.social-icons {
-  &__list {
-    &:not(:first-child) {
-      margin-left: 10px;
+  .list-box {
+    display: flex;
+  }
+
+  .our-features,
+  .team-card,
+  .contact-form,
+  .portfolio-card {
+    &__title {
+      color: $pri-title;
     }
   }
 
-  &__icon {
-    @extend %icon;
+  .input,
+  .comment,
+  .email {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .social-icons {
+    &__list {
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
+    &__icon {
+      @extend %icon;
+    }
   }
 }

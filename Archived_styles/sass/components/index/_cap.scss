@@ -1,0 +1,33 @@
+/*index_cap*/
+.cap {
+  padding: 200px 0;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/cap-bg-img.jpg);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $ter-section-bgc;
+
+  &__order-btn {
+    @extend %hero-btn;
+    padding: 10px 32px;
+  }
+
+  &__container {
+    @extend %flex-align;
+    flex-direction: column;
+  }
+
+  &__title {
+    width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.364;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $hero-text;
+
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}

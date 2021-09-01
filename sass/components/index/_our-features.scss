@@ -1,25 +1,27 @@
 /*index_features*/
-.our-features {
-  &__list {
-    width: 270px;
-  }
+@media screen and (min-width: $desktop) {
+  .our-features {
+    &__list {
+      width: 270px;
+    }
 
-  &__box {
-    display: block;
-    margin-bottom: 30px;
-    padding: 25px 100px;
-    background-color: $sec-section-bgc;
-    width: 270px;
-    height: 120px;
-  }
-  &__title {
-    margin-bottom: 10px;
-    @extend %up-case-title;
-  }
+    &__box {
+      display: block;
+      margin-bottom: 30px;
+      padding: 25px 100px;
+      background-color: $sec-section-bgc;
+      width: 270px;
+      height: 120px;
+    }
+    &__title {
+      margin-bottom: 10px;
+      @extend %up-case-title;
+    }
 
-  &__feature {
-    &:not(:first-child) {
-      margin-left: 30px;
+    &__feature {
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
     }
   }
 }

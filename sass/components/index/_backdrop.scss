@@ -1,181 +1,185 @@
 /*index_backdrop*/
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  visibility: visible;
-  z-index: 1;
-
-  &--is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
 .contact-form {
-  position: absolute;
-  padding: 40px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  @extend %flex-align;
-  flex-direction: column;
-
-  &__close-btn {
-    @extend %flex-align;
-    justify-content: center;
-    cursor: pointer;
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: $body-bgc;
-  }
-
-  &__title {
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    margin-bottom: 12px;
-    font-weight: 700;
-  }
-
-  &__send-btn {
-    @extend %hero-btn;
-    padding: 10px 55px 10px 56px;
-  }
-
-  &__close-icon {
-    fill: #212121;
-
-    .contact-form__close-btn:hover &,
-    .contact-form__close-btn:focus & {
-      fill: $accent;
+    &__send-btn {
+      @extend %hero-btn;
+      padding: 10px 55px 10px 56px;
     }
-  }
 }
 
-.form-field {
-  &__caption {
-    display: block;
-    font-size: 12px;
-    line-height: 1.167;
-    letter-spacing: 0.01em;
-  }
-
-  &__input {
-    width: 448px;
-    height: 40px;
-    padding: 0 0 0 42px;
-    @extend %modal-input;
-
-    &:focus {
-      @extend %form-input-focus;
-    }
-  }
-
-  &--name,
-  &--phone,
-  &--mail {
-    position: relative;
-    margin-bottom: 10px;
-  }
-
-  &__form-icon {
-    left: 12px;
-    bottom: 11px;
-    position: absolute;
-    z-index: 2;
-
-    .form-field:focus-within & {
-      fill: $accent;
-    }
-  }
-
-  &--comment {
-    margin-bottom: 20px;
-  }
-
-  &__comment {
-    width: 448px;
-    height: 120px;
-    font-size: 14px;
-    line-height: 1.143;
-    letter-spacing: 0.01em;
-    margin: 0;
-    padding: 12px 16px;
-    resize: none;
-    @extend %modal-input;
-    &:focus {
-      @extend %form-input-focus;
-    }
-
-    &::placeholder {
-      color: rgba(117, 117, 117, 0.5);
-    }
-
-    &:focus::placeholder {
-      @extend %placeholder-onfocus;
-    }
-  }
-}
-
-.check-block {
-  justify-content: center;
-  position: relative;
-  margin-bottom: 30px;
-  @extend %flex-align;
-
-  &__agreement {
-    line-height: 1.714;
-    padding-left: 23px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  &__agreement-link {
-    color: $accent;
-  }
-
-  &__checked-icon,
-  &__unchecked-icon {
-    left: 0px;
-    top: 4px;
-    position: absolute;
-    pointer-events: none;
-
-    .check-block__checkbox:checked ~ & {
-      fill: $accent;
-    }
-  }
-
-  &__checked-icon {
-    fill: white;
-  }
-
-  &__unchecked-icon {
-    fill: $pri-title;
+@media screen and (min-width: $desktop){
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
     z-index: 1;
 
-    .check-block__checkbox:hover ~ &,
-    .check-block__checkbox:focus ~ & {
-      fill: $btn-hover;
+    &--is-hidden {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .contact-form {
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    @extend %flex-align;
+    flex-direction: column;
+
+    &__close-btn {
+      @extend %flex-align;
+      justify-content: center;
+      cursor: pointer;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background-color: $body-bgc;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    &__close-icon {
+      fill: #212121;
+
+      .contact-form__close-btn:hover &,
+      .contact-form__close-btn:focus & {
+        fill: $accent;
+      }
+    }
+  }
+
+  .form-field {
+    &__caption {
+      display: block;
+      font-size: 12px;
+      line-height: 1.167;
+      letter-spacing: 0.01em;
+    }
+
+    &__input {
+      width: 448px;
+      height: 40px;
+      padding: 0 0 0 42px;
+      @extend %modal-input;
+
+      &:focus {
+        @extend %form-input-focus;
+      }
+    }
+
+    &--name,
+    &--phone,
+    &--mail {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    &__form-icon {
+      left: 12px;
+      bottom: 11px;
+      position: absolute;
+      z-index: 2;
+
+      .form-field:focus-within & {
+        fill: $accent;
+      }
+    }
+
+    &--comment {
+      margin-bottom: 20px;
+    }
+
+    &__comment {
+      width: 448px;
+      height: 120px;
+      font-size: 14px;
+      line-height: 1.143;
+      letter-spacing: 0.01em;
+      margin: 0;
+      padding: 12px 16px;
+      resize: none;
+      @extend %modal-input;
+      &:focus {
+        @extend %form-input-focus;
+      }
+
+      &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+      }
+
+      &:focus::placeholder {
+        @extend %placeholder-onfocus;
+      }
+    }
+  }
+
+  .check-block {
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
+    @extend %flex-align;
+
+    &__agreement {
+      line-height: 1.714;
+      padding-left: 23px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__agreement-link {
+      color: $accent;
+    }
+
+    &__checked-icon,
+    &__unchecked-icon {
+      left: 0px;
+      top: 4px;
+      position: absolute;
+      pointer-events: none;
+
+      .check-block__checkbox:checked ~ & {
+        fill: $accent;
+      }
+    }
+
+    &__checked-icon {
+      fill: white;
+    }
+
+    &__unchecked-icon {
+      fill: $pri-title;
+      z-index: 1;
+
+      .check-block__checkbox:hover ~ &,
+      .check-block__checkbox:focus ~ & {
+        fill: $btn-hover;
+      }
     }
   }
 }

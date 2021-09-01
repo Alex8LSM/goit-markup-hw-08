@@ -1,19 +1,21 @@
 /*footer_social*/
-.social-container {
-  width: 206px;
-  height: 80px;
-  margin: 15px 93px 0px 70px;
+@media screen and (min-width: $desktop){
+  .social-container {
+    width: 206px;
+    height: 80px;
+    margin: 15px 93px 0px 70px;
 
-  &__title {
-    @extend %up-case-title;
-    @extend %footer-title;
-  }
+    &__title {
+      @extend %up-case-title;
+      @extend %footer-title;
+    }
 
-  &__icon {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+    &__icon {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
 
-  &__social-icon {
-    fill: $hero-text;
+    &__social-icon {
+      fill: $hero-text;
+    }
   }
 }

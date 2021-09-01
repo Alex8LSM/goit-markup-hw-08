@@ -1,0 +1,76 @@
+/*portfolio_cards*/
+.portfolio {
+  &__container {
+    @extend %flex-align;
+    flex-direction: column;
+  }
+}
+
+.portfolio-cards {
+  margin-top: -30px;
+  margin-left: -30px;
+  flex-wrap: wrap;
+
+  &__list {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+.portfolio-card {
+  display: block;
+  &__image-box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__info {
+    border: 1px solid #eeeeee;
+    border-top: none;
+    padding: 20px 24px;
+
+    display: block;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 4px;
+  }
+
+  &__type {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(33, 150, 243, 0.9);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  bottom: -100%;
+  pointer-events: none;
+  @extend %flex-align;
+
+  &__text {
+    padding: 0 24px;
+    color: $hero-text;
+    font-size: 18px;
+    line-height: 1.556;
+  }
+
+  .portfolio-card:hover &,
+  .portfolio-card:focus & {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+}

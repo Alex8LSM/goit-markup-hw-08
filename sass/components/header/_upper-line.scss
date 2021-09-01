@@ -1,62 +1,4 @@
 /*header_upper-line*/
-.upper-line {
-  border-bottom: 1px solid #ececec;
-  padding: 25px 0;
-
-  &__container {
-    @extend %flex-align;
-  }
-
-  &__nav-links {
-    margin-left: 93px;
-  }
-
-  &__list-box {
-    @extend %flex-align;
-    margin-left: auto;
-  }
-
-  &__list {
-    letter-spacing: 0.02em;
-    line-height: 1.172;
-    font-weight: 500;
-    &--nav {
-      color: $pri-link;
-    }
-    &--contacts {
-      color: $pri-text;
-    }
-    &:not(:first-child) {
-      margin-left: 50px;
-    }
-  }
-  &__link {
-    @extend %focus_hover;
-    @extend %flex-align;
-  }
-
-  &__active-page {
-    position: relative;
-    color: $accent;
-    &::after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      background-color: $accent;
-      height: 4px;
-      width: 100%;
-      border-radius: 2px;
-      bottom: -33px;
-      left: 0;
-    }
-  }
-
-  &__email-icon,
-  &__phone-icon {
-    margin-right: 10px;
-    fill: currentColor;
-  }
-}
 
 .header-brand {
   @extend %brand;
@@ -65,5 +7,87 @@
   }
   &__color-two {
     color: $sec-brand;
+  }
+}
+
+.upper-line {
+    &__container {
+      min-height: 60px;
+     @extend %mobile-flex-align;
+    }
+  }
+
+@media screen and (max-width: $mobile-max) {
+  .upper-line {
+    &__container {
+      justify-content: space-between;
+    }
+      outline: 1px solid blue;
+  
+    &__list-box,
+    &__nav-links {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .upper-line {
+    border-bottom: 1px solid #ececec;
+    padding: 25px 0;
+    
+    &__container {
+      @extend %flex-align;
+    }
+
+    &__nav-links {
+      margin-left: 93px;
+    }
+
+    &__list-box {
+      @extend %flex-align;
+      margin-left: auto;
+    }
+
+    &__list {
+      letter-spacing: 0.02em;
+      line-height: 1.172;
+      font-weight: 500;
+      &--nav {
+        color: $pri-link;
+      }
+      &--contacts {
+        color: $pri-text;
+      }
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
+    }
+    &__link {
+      @extend %focus_hover;
+      @extend %flex-align;
+    }
+
+    &__active-page {
+      position: relative;
+      color: $accent;
+      &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        background-color: $accent;
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        bottom: -33px;
+        left: 0;
+      }
+    }
+
+    &__email-icon,
+    &__phone-icon {
+      margin-right: 10px;
+      fill: currentColor;
+    }
   }
 }

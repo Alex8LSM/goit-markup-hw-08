@@ -1,16 +1,4 @@
 /*footer-adress*/
-.footer {
-  padding: 60px 0;
-  background-color: $ter-section-bgc;
-
-  &__container {
-    display: flex;
-  }
-
-  &__link {
-    @extend %focus_hover;
-  }
-}
 
 .footer-brand {
   @extend %brand;
@@ -22,21 +10,37 @@
   }
 }
 
-.address {
-  margin-top: 20px;
-  width: 231px;
+@media screen and (min-width: $desktop){
+  .footer {
+    padding: 60px 0;
+    background-color: $ter-section-bgc;
 
-  &__text {
-    color: $ft-text;
-    font-style: normal;
+    &__container {
+      display: flex;
+    }
+
+    &__link {
+      @extend %focus_hover;
+    }
   }
 
-  &__list-box {
-    color: $footer-contacts;
-    font-style: normal;
-  }
 
-  &__list {
-    margin-top: 9px;
+  .address {
+    margin-top: 20px;
+    width: 231px;
+
+    &__text {
+      color: $ft-text;
+      font-style: normal;
+    }
+
+    &__list-box {
+      color: $footer-contacts;
+      font-style: normal;
+    }
+
+    &__list {
+      margin-top: 9px;
+    }
   }
 }

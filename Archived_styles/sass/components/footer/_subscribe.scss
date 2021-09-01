@@ -1,0 +1,57 @@
+/*footer_subscribe*/
+.subscribe-form {
+  width: 570px;
+  height: 86px;
+  margin-top: 15px;
+  background-color: $ter-section-bgc;
+  @extend %flex-align;
+  align-items: flex-end;
+
+  &__title {
+    @extend %up-case-title;
+    @extend %footer-title;
+  }
+
+  &__btn {
+    display: block;
+    position: relative;
+    margin-left: 12px;
+    height: 50px;
+    padding: 10px 62px 10px 29px;
+
+    @extend %hero-btn;
+  }
+
+  &__subscribe-img {
+    position: absolute;
+    border-radius: 1px;
+    top: 13px;
+    right: 28px;
+  }
+
+  &__email {
+    padding: 0 0 0 16px;
+    color: #ffffff;
+    font-size: 16px;
+    width: 358px;
+    height: 50px;
+    line-height: 1.25;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: $ter-section-bgc;
+    margin-top: 20px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:focus {
+      @extend %form-input-focus;
+    }
+
+    &:focus::placeholder {
+      @extend %placeholder-onfocus;
+    }
+  }
+}

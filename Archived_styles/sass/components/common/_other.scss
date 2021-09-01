@@ -1,0 +1,64 @@
+/*common_other*/
+body {
+  background-color: $body-bgc;
+  color: $pri-text;
+  font-family: $main-font, $secondary-font, sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.714; /*24px*/
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.list-box {
+  display: flex;
+}
+
+.our-features,
+.team-card,
+.contact-form,
+.portfolio-card {
+  &__title {
+    color: $pri-title;
+  }
+}
+
+.input,
+.comment,
+.email {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.social-icons {
+  &__list {
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__icon {
+    @extend %icon;
+  }
+}
