@@ -24,6 +24,11 @@ ul {
   list-style: none;
 }
 
+button {
+  padding: 0;
+  border: 0;
+}
+
 /*common_other*/
 body {
   background-color: #ffffff;
@@ -84,6 +89,7 @@ body {
 
 /*common_animation*/
 /*utils_placeholders*/
+/*all*/
 .header-brand, .footer-brand {
   font-family: 'Raleway';
   font-weight: bold;
@@ -118,6 +124,18 @@ body {
   background-color: #188ce8;
 }
 
+/*max-width: $mobile-max*/
+@media screen and (max-width: 767px) {
+  .mobile-menu__btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+/*min-width: $desktop*/
 @media screen and (min-width: 1600px) {
   .upper-line__container, .upper-line__list-box, .upper-line__link, .subscribe-form, .contact-form, .contact-form__close-btn, .check-block, .portfolio__container, .overlay {
     display: -webkit-box;
@@ -257,14 +275,6 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .upper-line {
-    outline: 1px solid blue;
-  }
-  .upper-line__container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
   .upper-line__list-box, .upper-line__nav-links {
     display: none;
   }
@@ -317,44 +327,33 @@ body {
 }
 
 /*header_mobile-menu*/
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .mobile-menu__open {
     display: none;
   }
 }
 
-@media (max-width: 767px) {
-  .mobile-menu__open {
-    min-height: 40px;
-    min-width: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    outline: none;
+@media screen and (max-width: 767px) {
+  .mobile-menu__btn {
+    outline: 1px solid red;
   }
-  .mobile-menu__open:hover, .mobile-menu__open:focus {
-    background-color: rgba(0, 0, 0, 0.1);
+  .mobile-menu__icon {
+    fill: #212121;
+  }
+  .mobile-menu__btn:hover .mobile-menu__icon,
+  .mobile-menu__btn:focus .mobile-menu__icon {
+    fill: #2196f3;
   }
   .mobile-menu__container {
+    letter-spacing: 0.02em;
+    font-weight: 500;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
-    background-color: #3f51b5;
+    padding: 48px 40px;
+    background-color: #ffffff;
     z-index: 999;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -367,16 +366,56 @@ body {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  .mobile-menu__close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    color: #fff;
+  .navigation__list:not(:last-child) {
+    margin-bottom: 32px;
   }
-  .mobile-menu .link {
-    display: block;
-    padding: 10px;
-    color: #fff;
+  .navigation__link {
+    color: #212121;
+    font-size: 40px;
+    line-height: 1.175;
+  }
+  .navigation__active-page {
+    color: #2196f3;
+  }
+  .mobile-menu__list:first-child {
+    margin-bottom: 32px;
+  }
+  .mobile-menu__phone {
+    color: #2196f3;
+    font-size: 34px;
+    line-height: 1.175;
+  }
+  .mobile-menu__mail {
+    font-size: 24px;
+    line-height: 1.167;
+  }
+  .social-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .social-menu__link {
+    font-size: 18px;
+    line-height: 1.22;
+    color: #2196f3;
+  }
+  .social-menu__list:not(:last-child) {
+    margin-right: 20px;
+    position: relative;
+  }
+  .social-menu__list:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 22px;
+    height: 0px;
+    bottom: 0;
+    right: 10;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    -webkit-transform: rotate(90deg) translateX(-50%);
+            transform: rotate(90deg) translateX(-50%);
   }
 }
 

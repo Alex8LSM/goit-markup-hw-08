@@ -63,7 +63,7 @@
     }
 
     &__close-icon {
-      fill: #212121;
+      fill: $pri-link;
 
       .contact-form__close-btn:hover &,
       .contact-form__close-btn:focus & {

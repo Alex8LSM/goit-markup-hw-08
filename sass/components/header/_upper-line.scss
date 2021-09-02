@@ -19,10 +19,8 @@
 
 @media screen and (max-width: $mobile-max) {
   .upper-line {
-    &__container {
-      justify-content: space-between;
-    }
-      outline: 1px solid blue;
+    // &__container {
+    // }
   
     &__list-box,
     &__nav-links {
