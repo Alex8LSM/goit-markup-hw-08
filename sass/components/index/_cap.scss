@@ -22,7 +22,7 @@
     }
 
   &__container {
-    @extend %mobile-flex-align;
+    @extend %flex-align;
     flex-direction: column;
   }
 

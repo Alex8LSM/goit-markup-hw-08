@@ -7,7 +7,7 @@
   line-height: 1.192;
 }
 
-%mobile-flex-align {
+%flex-align {
   display: flex;
   align-items: center;
 }
@@ -30,6 +30,23 @@
     background-color: $btn-hover;
   }
 }
+
+  %up-case-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.172;
+    font-size: 14px; 
+  }
+
+  %first-title {
+    color: $pri-title;
+    font-size: 28px;
+    line-height: 1.172;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
 /*max-width: $mobile-max*/
 @media screen and (max-width: $mobile-max){
   %mobile-menu-btn {
@@ -42,10 +59,10 @@
 }
 /*min-width: $desktop*/
 @media screen and (min-width: $desktop){
-  %flex-align {
-  display: flex;
-  align-items: center;
-}
+//   %flex-align {
+//   display: flex;
+//   align-items: center;
+// }
 
   %form-input-focus,
   %border-focus {
@@ -80,21 +97,14 @@
     }
   }
 
-  %first-title {
-    color: $pri-title;
-    font-size: 36px;
-    line-height: 1.172;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  %up-case-title {
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 1.172;
-    font-size: 14px; 
-  }
+  // %first-title {
+  //   color: $pri-title;
+  //   font-size: 36px;
+  //   line-height: 1.172;
+  //   font-weight: 700;
+  //   text-align: center;
+  //   margin-bottom: 50px;
+  // }
 
   %footer-title {
     color: $ft-text;

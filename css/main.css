@@ -51,11 +51,24 @@ body {
   clip: rect(0 0 0 0);
 }
 
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  outline: 1px solid red;
+}
+
 .container {
   max-width: 480px;
   padding: 0px 15px;
   margin: 0 auto;
   outline: 1px solid orange;
+}
+
+.our-features__title,
+.team-card__title,
+.contact-form__title,
+.portfolio-card__title {
+  color: #212121;
 }
 
 @media screen and (min-width: 1600px) {
@@ -70,12 +83,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .our-features__title,
-  .team-card__title,
-  .contact-form__title,
-  .portfolio-card__title {
-    color: #212121;
   }
   .input:hover,
   .comment:hover,
@@ -97,7 +104,7 @@ body {
   line-height: 1.192;
 }
 
-.upper-line__container, .cap__container {
+.upper-line__container, .cap__container, .our-features__box, .portfolio__container, .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,6 +131,22 @@ body {
   background-color: #188ce8;
 }
 
+.our-features__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.172;
+  font-size: 14px;
+}
+
+.our-team__first-title {
+  color: #212121;
+  font-size: 28px;
+  line-height: 1.172;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 /*max-width: $mobile-max*/
 @media screen and (max-width: 767px) {
   .mobile-menu__btn {
@@ -137,14 +160,6 @@ body {
 
 /*min-width: $desktop*/
 @media screen and (min-width: 1600px) {
-  .upper-line__container, .upper-line__list-box, .upper-line__link, .subscribe-form, .contact-form, .contact-form__close-btn, .check-block, .portfolio__container, .overlay {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .subscribe-form__email:focus, .form-field__input:focus, .form-field__comment:focus,
   .company-label:hover,
   .company-label:focus {
@@ -182,20 +197,6 @@ body {
   }
   .social-icons__icon:hover, .social-icons__icon:focus {
     background-color: #2196f3;
-  }
-  .our-works__first-title, .our-team__first-title, .reg-customers__first-title {
-    color: #212121;
-    font-size: 36px;
-    line-height: 1.172;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .social-container__title, .subscribe-form__title, .our-features__title {
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 1.172;
-    font-size: 14px;
   }
   .social-container__title, .subscribe-form__title {
     color: #ffffff;
@@ -262,6 +263,10 @@ body {
 }
 
 /*header_upper-line*/
+.mobile-menu__btn {
+  display: none;
+}
+
 .header-brand__color-one {
   color: #2196f3;
 }
@@ -271,6 +276,7 @@ body {
 }
 
 .upper-line__container {
+  position: relative;
   min-height: 60px;
 }
 
@@ -335,7 +341,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .mobile-menu__btn {
-    outline: 1px solid red;
+    display: block;
   }
   .mobile-menu__icon {
     fill: #212121;
@@ -345,18 +351,25 @@ body {
     fill: #2196f3;
   }
   .mobile-menu__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     letter-spacing: 0.02em;
     font-weight: 500;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 48px 40px;
     background-color: #ffffff;
     z-index: 999;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translatey(-100%);
+            transform: translatey(-100%);
     -webkit-transition: -webkit-transform 250ms ease-in-out;
     transition: -webkit-transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out;
@@ -377,8 +390,15 @@ body {
   .navigation__active-page {
     color: #2196f3;
   }
+  .mobile-menu__contacts {
+    margin-top: auto;
+    outline: 1px solid blue;
+  }
   .mobile-menu__list:first-child {
     margin-bottom: 32px;
+  }
+  .mobile-menu__list:last-child {
+    margin-bottom: 64px;
   }
   .mobile-menu__phone {
     color: #2196f3;
@@ -571,6 +591,33 @@ body {
 }
 
 /*index_features*/
+.our-features__container {
+  outline: 1px solid blue;
+  width: 100%;
+}
+
+.our-features__box {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  height: 120px;
+}
+
+.our-features__title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.our-features__feature {
+  outline: 1px solid green;
+}
+
+.our-features__feature:not(:first-child) {
+  margin-top: 30px;
+}
+
 @media screen and (min-width: 1600px) {
   .our-features__list {
     width: 270px;
@@ -623,10 +670,11 @@ body {
 }
 
 /*index_our-team*/
+.our-team {
+  background-color: #f5f4fa;
+}
+
 @media screen and (min-width: 1600px) {
-  .our-team {
-    background-color: #f5f4fa;
-  }
   .team-cards__card {
     background-color: #ffffff;
     border-radius: 0px 0px 4px 4px;

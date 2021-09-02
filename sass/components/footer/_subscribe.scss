@@ -11,11 +11,11 @@
     height: 86px;
     margin-top: 15px;
     background-color: $ter-section-bgc;
-    @extend %flex-align;
+    // @extend %flex-align;
     align-items: flex-end;
 
     &__title {
-      @extend %up-case-title;
+      // @extend %up-case-title;
       @extend %footer-title;
     }
 

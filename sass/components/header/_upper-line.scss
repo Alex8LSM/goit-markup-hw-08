@@ -1,4 +1,9 @@
 /*header_upper-line*/
+.mobile-menu {
+  &__btn {
+    display: none;
+  }
+}
 
 .header-brand {
   @extend %brand;
@@ -12,8 +17,9 @@
 
 .upper-line {
     &__container {
+      position: relative;
       min-height: 60px;
-     @extend %mobile-flex-align;
+     @extend %flex-align;
     }
   }
 
@@ -35,7 +41,7 @@
     padding: 25px 0;
     
     &__container {
-      @extend %flex-align;
+      // @extend %flex-align;
     }
 
     &__nav-links {
@@ -43,7 +49,7 @@
     }
 
     &__list-box {
-      @extend %flex-align;
+      // @extend %flex-align;
       margin-left: auto;
     }
 
@@ -63,7 +69,7 @@
     }
     &__link {
       @extend %focus_hover;
-      @extend %flex-align;
+      // @extend %flex-align;
     }
 
     &__active-page {

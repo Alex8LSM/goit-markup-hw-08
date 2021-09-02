@@ -6,6 +6,7 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.714; /*24px*/
+  // min-width: 350px;
 }
 
 .hidden {
@@ -19,13 +20,26 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.container {
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    outline: 1px solid red;
+  }
 
+.container {
   max-width: $mobile;
   padding: 0px 15px;
   margin: 0 auto;
-  
   outline: 1px solid orange;
+}
+
+.our-features,
+.team-card,
+.contact-form,
+.portfolio-card {
+  &__title {
+    color: $pri-title;
+  }
 }
 
 @media screen and (min-width: $desktop){
@@ -42,14 +56,6 @@ body {
     display: flex;
   }
 
-  .our-features,
-  .team-card,
-  .contact-form,
-  .portfolio-card {
-    &__title {
-      color: $pri-title;
-    }
-  }
 
   .input,
   .comment,

@@ -1,11 +1,14 @@
 /*index_our-team*/
-@media screen and (min-width: $desktop) {
-  .our-team {
+.our-team {
     background-color: $sec-section-bgc;
     &__first-title {
       @extend %first-title;
     }
-  }
+}
+
+
+@media screen and (min-width: $desktop) {
+
 
   .team-cards {
     &__card {
