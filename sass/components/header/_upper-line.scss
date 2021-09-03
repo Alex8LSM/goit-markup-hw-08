@@ -1,10 +1,4 @@
 /*header_upper-line*/
-.mobile-menu {
-  &__btn {
-    display: none;
-  }
-}
-
 .header-brand {
   @extend %brand;
   &__color-one {
@@ -35,14 +29,30 @@
   }
 }
 
+@media screen and (max-width: $tablet-max) {
+  .upper-line {
+    padding: 21px 0;
+    
+    &__nav-links {
+      margin-left: 88px;
+    }
+    &__list-box {
+      display: flex;
+    
+    }
+  }
+
+}
+
+
 @media screen and (min-width: $desktop) {
   .upper-line {
     border-bottom: 1px solid #ececec;
     padding: 25px 0;
     
-    &__container {
+    // &__container {
       // @extend %flex-align;
-    }
+    // }
 
     &__nav-links {
       margin-left: 93px;

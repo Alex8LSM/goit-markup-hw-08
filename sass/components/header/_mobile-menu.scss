@@ -1,20 +1,21 @@
 /*header_mobile-menu*/
 @media screen and (min-width: 768px) {
-    .mobile-menu__open {
-        display: none;
+    .mobile-menu{
+      &__open,
+      &__container {
+          display: none;
+      }
     }
 }
 
 @media screen and (max-width: $mobile-max) {
   .mobile-menu {
     &__btn { //Кнопки відкрити/закрити меню
- 
       @extend %mobile-menu-btn;
-			display: block;
     }
     &__icon {
       fill: $pri-link;
-
+      display: block;
       .mobile-menu__btn:hover &,
       .mobile-menu__btn:focus & 
        {
@@ -61,33 +62,27 @@
   }
 
   .mobile-menu {
-		&__contacts {
-			margin-top: auto;
-			outline: 1px solid blue;
-			// min-width: 435px;
-		}
-
     &__list {
       &:first-child {
         margin-bottom: 32px;
       }
- 			&:last-child {
+      &:last-child {
         margin-bottom: 64px;
       }
-
-
     }
     &__phone {
       color: $accent;
       font-size: 34px;
       line-height: 1.175;
-			
     }
     &__mail {
       font-size: 24px;
       line-height: 1.167;
     }
     
+    &__contacts {
+      margin-top: auto;
+    }
   }
 
   .social-menu {
