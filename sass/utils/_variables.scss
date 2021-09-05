@@ -17,7 +17,7 @@
   $hero-text: #ffffff;     // Колір тексту героя */
   $ft-text: #ffffff;       // Колір тексту адреси у футері
   $footer-contacts: rgba(255, 255, 255, 0.6); //колір контактів в підвалі 
-
+  $pri-svg : #afb1b8 ; // Оссновний колір іконок
   $anim-func: cubic-bezier(0.4, 0, 0.2, 1);
   $anim-time: 250ms;
 
@@ -28,5 +28,5 @@ $mobile-min: 320px;
 $mobile: 480px;
 $mobile-max: 767px;
 $tablet: 768px;
-$tablet-max: 1599px;
-$desktop: 1600px;
+$tablet-max: 1199px;
+$desktop: 1200px;

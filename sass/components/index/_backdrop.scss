@@ -6,9 +6,8 @@
     }
 }
 
-@media screen and (min-width: $desktop){
-  .backdrop {
-    position: fixed;
+.backdrop {
+  position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -18,14 +17,15 @@
     opacity: 1;
     visibility: visible;
     z-index: 1;
-
+    
     &--is-hidden {
       visibility: hidden;
       opacity: 0;
       pointer-events: none;
     }
   }
-
+  
+  // @media screen and (min-width: $tablet){
   .contact-form {
     position: absolute;
     padding: 40px;
@@ -182,4 +182,4 @@
       }
     }
   }
-}
+// }

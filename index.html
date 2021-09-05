@@ -24,7 +24,7 @@
           ><span class="header-brand__color-two">Studio</span>
         </a>
         <nav class="upper-line__nav-links">
-          <ul class="upper-line__list-box">
+          <ul class="upper-line__list-box flex-list">
             <li class="upper-line__list upper-line__list--nav">
               <a class="link upper-line__link upper-line__active-page" href="./index.html"
                 >Студия</a
@@ -38,9 +38,9 @@
             </li>
           </ul>
         </nav>
-        <ul class="upper-line__list-box">
-          <li class="upper-line__list upper-line__list--contacts">
-            <a class="upper-line__link" href="mailto:info@devstudio.com">
+        <ul class="upper-line__contact-box">
+          <li class="upper-line__list upper-line__list--mail">
+            <a class="upper-line__link upper-line__link--contacts" href="mailto:info@devstudio.com">
               <svg class="upper-line__email-icon" width="16px" height="12px">
                 <use href="./images/icons.svg#email"></use>
               </svg>
@@ -48,8 +48,8 @@
             </a>
           </li>
 
-          <li class="upper-line__list upper-line__list--contacts">
-            <a class="upper-line__link" href="tel:+380961111111">
+          <li class="upper-line__list upper-line__list--phone">
+            <a class="upper-line__link upper-line__link--contacts" href="tel:+380961111111">
               <svg class="upper-line__phone-icon" width="10px" height="16px">
                 <use href="./images/icons.svg#phone"></use>
               </svg>
@@ -110,7 +110,7 @@
       <section class="our-features section">
         <div class="container our-features__container">
           <h2 class="hidden">Наши особенности</h2>
-          <ul class="list-box">
+          <ul class="list-box our-features__list-box">
             <li class="our-features__feature">
               <div class="our-features__box">
                 <svg class="our-features__icon" width="70px" height="70px">
@@ -165,7 +165,7 @@
       <section class="our-works our-works--geometry section">
         <div class="container">
           <h2 class="our-works__first-title">Чем мы занимаемся</h2>
-          <ul class="list-box">
+          <ul class="flex-list">
             <li class="our-works__work">
               <a class="link" href="#">
                 <img src="./images/work1.jpg" width="370" height="294" alt="Изображение работы 1" />
@@ -202,7 +202,7 @@
           <h2 class="our-team__first-title">Наша команда</h2>
           <ul class="list-box team-cards">
             <li class="team-cards__card">
-              <img
+              <img class="team-cards__image"
                 src="./images/member1.jpg"
                 width="270"
                 height="260"
@@ -248,7 +248,7 @@
             </li>
 
             <li class="team-cards__card">
-              <img src="./images/member2.jpg" width="270" height="260" alt="Фото Ольги Репиной" />
+              <img class="team-cards__image" src="./images/member2.jpg" width="270" height="260" alt="Фото Ольги Репиной" />
               <div class="team-card">
                 <h3 class="team-card__title">Ольга Репина</h3>
                 <p class="team-card__profession">Frontend Developer</p>
@@ -289,7 +289,7 @@
             </li>
 
             <li class="team-cards__card">
-              <img
+              <img class="team-cards__image"
                 src="./images/member3.jpg"
                 width="270"
                 height="260"
@@ -335,7 +335,7 @@
             </li>
 
             <li class="team-cards__card">
-              <img
+              <img class="team-cards__image"
                 src="./images/member4.jpg"
                 width="270"
                 height="260"
@@ -515,53 +515,54 @@
     <!-- Футер -->
     <footer class="footer section">
       <div class="container footer__container">
-        <div class="logo-container">
-          <div class="footer-brand">
-            <a class="" href="./index.html">
-              <span class="footer-brand__color-one">Web</span
-              ><span class="footer-brand__color-two">Studio</span>
-            </a>
+        <div class="footer-box">
+          <div class="footer-block">
+            <div class="footer-brand">
+              <a class="" href="./index.html">
+                <span class="footer-brand__color-one">Web</span
+                ><span class="footer-brand__color-two">Studio</span>
+              </a>
+            </div>
+            <address class="address">
+              <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
+              <ul class="address__list-box">
+                <li class="address__list">
+                  <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
+                </li>
+
+                <li class="address__list">
+                  <a class="footer__link" href="tel:+380991111111">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
           </div>
-          <address class="address">
-            <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="address__list-box">
-              <li class="address__list">
-                <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
+          <div class="social-container">
+            <h3 class="social-container__title">присоединяйтесь</h3>
+            <ul class="list-box social-icons">
+              <li class="list social-icons__list">
+                <a href="#" class="link social-container__icon social-icons__icon">
+                  <svg class="social-container__social-icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-
-              <li class="address__list">
-                <a class="footer__link" href="tel:+380991111111">+38 099 111 11 11</a>
+              
+              <li class="list social-icons__list">
+                <a href="#" class="link social-container__icon social-icons__icon">
+                  <svg class="social-container__social-icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-            </ul>
-          </address>
-        </div>
-        <div class="social-container">
-          <h3 class="social-container__title">присоединяйтесь</h3>
-          <ul class="list-box social-icons">
-            <li class="list social-icons__list">
-              <a href="#" class="link social-container__icon social-icons__icon">
-                <svg class="social-container__social-icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="list social-icons__list">
-              <a href="#" class="link social-container__icon social-icons__icon">
-                <svg class="social-container__social-icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="list social-icons__list">
-              <a href="#" class="link social-container__icon social-icons__icon">
-                <svg class="social-container__social-icon" width="20px" height="20px">
+              
+              <li class="list social-icons__list">
+                <a href="#" class="link social-container__icon social-icons__icon">
+                  <svg class="social-container__social-icon" width="20px" height="20px">
                   <use href="./images/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
-
+            
             <li class="list social-icons__list">
               <a href="#" class="link social-container__icon social-icons__icon">
                 <svg class="social-container__social-icon" width="20px" height="20px">
@@ -571,9 +572,10 @@
             </li>
           </ul>
         </div>
-
+      </div>
+        
         <form class="subscribe-form">
-          <label>
+          <label class="subscribe-form__label">
             <span class="subscribe-form__title">Подпишитесь на рассылку</span>
             <input class="subscribe-form__email" type="email" name="email" placeholder="E-mail" />
           </label>

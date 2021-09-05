@@ -10,35 +10,81 @@
 }
 
 .upper-line {
+    border-bottom: 1px solid #ececec;
     &__container {
       position: relative;
-      min-height: 60px;
-     @extend %flex-align;
+     @extend %mobile-flex;
     }
   }
 
 @media screen and (max-width: $mobile-max) {
   .upper-line {
-    // &__container {
-    // }
-  
-    &__list-box,
+    &__container {
+      min-height: 60px;
+      padding: 16px 15px;
+    }
+    &__contact-box,
     &__nav-links {
       display: none;
     }
   }
 }
 
-@media screen and (max-width: $tablet-max) {
+@media screen and (min-width: $tablet) {
   .upper-line {
-    padding: 21px 0;
-    
+    &__container {
+    min-height: 80px;
+    padding: 21px 15px;
+    }
     &__nav-links {
       margin-left: 88px;
     }
-    &__list-box {
-      display: flex;
-    
+    &__contact-box {
+      margin-left: auto;
+    }
+
+    &__list {
+      letter-spacing: 0.02em;
+      line-height: 1.142;
+      font-weight: 500;
+      &--nav {
+        color: $pri-link;
+      }
+      &--mail {
+        margin-bottom: 10px;
+      }
+      &--nav:not(:first-child) {
+        margin-left: 50px;
+      }
+    }
+    &__link {
+      @extend %focus_hover;
+      &--contacts {
+        color: $pri-text;
+        @extend %flex-align;
+      }
+    }
+
+  &__active-page {
+    position: relative;
+    color: $accent;
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      background-color: $accent;
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
+      bottom: -32px;
+      left: 0;
+    }
+  }
+
+    &__email-icon,
+    &__phone-icon {
+      margin-right: 10px;
+      fill: currentColor;
     }
   }
 
@@ -46,62 +92,24 @@
 
 
 @media screen and (min-width: $desktop) {
+  .header-brand {
+    font-size: 26px;
+    line-height: 1.192;
+  }
   .upper-line {
-    border-bottom: 1px solid #ececec;
-    padding: 25px 0;
-    
-    // &__container {
-      // @extend %flex-align;
-    // }
-
     &__nav-links {
       margin-left: 93px;
     }
-
-    &__list-box {
-      // @extend %flex-align;
-      margin-left: auto;
+    &__contact-box {
+      display: flex;
     }
-
-    &__list {
-      letter-spacing: 0.02em;
-      line-height: 1.172;
-      font-weight: 500;
-      &--nav {
-        color: $pri-link;
-      }
-      &--contacts {
-        color: $pri-text;
-      }
+    &__list--contacts {
       &:not(:first-child) {
         margin-left: 50px;
-      }
+      } 
     }
-    &__link {
-      @extend %focus_hover;
-      // @extend %flex-align;
-    }
-
-    &__active-page {
-      position: relative;
-      color: $accent;
-      &::after {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        background-color: $accent;
-        height: 4px;
-        width: 100%;
-        border-radius: 2px;
-        bottom: -33px;
-        left: 0;
-      }
-    }
-
-    &__email-icon,
-    &__phone-icon {
-      margin-right: 10px;
-      fill: currentColor;
+    &__list--mail {
+      margin: 0 30px 0 0;
     }
   }
 }

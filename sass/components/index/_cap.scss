@@ -22,7 +22,7 @@
     }
 
   &__container {
-    @extend %flex-align;
+    @extend %mobile-flex;
     flex-direction: column;
   }
 
@@ -32,6 +32,12 @@
   }
 }
 
+@media screen and (min-width: $tablet){
+  .cap {
+    max-width: 768px;
+  }
+}
+  
 
 @media screen and (min-width: $desktop){
   .cap {

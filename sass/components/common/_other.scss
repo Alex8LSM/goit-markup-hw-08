@@ -6,7 +6,6 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.714; /*24px*/
-  // min-width: 350px;
 }
 
 .hidden {
@@ -23,14 +22,14 @@ body {
 .section {
     padding-top: 60px;
     padding-bottom: 60px;
-    outline: 1px solid red;
+    // outline: 1px solid red;
   }
 
 .container {
   max-width: $mobile;
   padding: 0px 15px;
   margin: 0 auto;
-  outline: 1px solid orange;
+  // outline: 1px solid orange;
 }
 
 .our-features,
@@ -42,11 +41,38 @@ body {
   }
 }
 
+  .social-icons {
+    @extend %mobile-flex;
+    &__list {
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+    &__icon {
+      @extend %icon;
+    }
+  }
+
+  .input,
+  .comment,
+  .email {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .flex-list {
+    display: flex;
+  }
+
 @media screen and (min-width: $tablet){
 
   .container {
     max-width: $tablet;
   }
+
+
+
 }
 
 
@@ -57,31 +83,12 @@ body {
   }
 
   .container {
-    max-width: 1200px;
-  }
-
-  .list-box {
-    display: flex;
+    max-width: $desktop;
   }
 
 
-  .input,
-  .comment,
-  .email {
-    &:hover {
-      cursor: pointer;
-    }
-  }
 
-  .social-icons {
-    &__list {
-      &:not(:first-child) {
-        margin-left: 10px;
-      }
-    }
 
-    &__icon {
-      @extend %icon;
-    }
-  }
+
+
 }

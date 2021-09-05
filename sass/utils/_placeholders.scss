@@ -3,11 +3,16 @@
 %brand {
   font-family: 'Raleway';
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.192;
+  font-size: 24px;
+  line-height: 1.167;
+
+   @media screen and (min-width: $desktop){
+      font-size: 26px;
+      line-height: 1.192
+    }
 }
 
-%flex-align {
+%mobile-flex {
   display: flex;
   align-items: center;
 }
@@ -36,8 +41,9 @@
     font-weight: 700;
     line-height: 1.172;
     font-size: 14px; 
-  }
 
+  }
+  
   %first-title {
     color: $pri-title;
     font-size: 28px;
@@ -45,45 +51,14 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
-  }
 
-/*max-width: $mobile-max*/
-@media screen and (max-width: $mobile-max){
-  %mobile-menu-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background-color: transparent;
-    cursor: pointer;
-  }
-}
-/*min-width: $desktop*/
-@media screen and (min-width: $desktop){
-//   %flex-align {
-//   display: flex;
-//   align-items: center;
-// }
-
-  %form-input-focus,
-  %border-focus {
-    border-color: $accent;
-    outline: none;
-  }
-
-  %placeholder-onfocus {
-      color: $accent;
-  }
-
-
-  %focus_hover {
-    &:focus,
-    &:hover {
-      color: $accent; 
+    @media screen and (min-width: $desktop){
+      font-size: 36px;
+      margin-bottom: 50px;
     }
   }
 
-
-  %icon {
+    %icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,6 +71,51 @@
       background-color: $accent;
     }
   }
+  
+  %form-input-focus,
+  %border-focus {
+    border-color: $accent;
+    outline: none;
+  }
+  
+  %placeholder-onfocus {
+      color: $accent;
+  }
+
+  
+  
+  %footer-title {
+    color: $ft-text;
+    margin-bottom: 20px;
+  }
+
+  /*max-width: $mobile-max*/
+  @media screen and (max-width: $mobile-max){
+    %mobile-menu-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+/*min-width: $desktop*/
+@media screen and (min-width: $tablet){
+  %flex-align {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+  %focus_hover {
+    &:focus,
+    &:hover {
+      color: $accent; 
+    }
+  }
 
   // %first-title {
   //   color: $pri-title;
@@ -106,10 +126,6 @@
   //   margin-bottom: 50px;
   // }
 
-  %footer-title {
-    color: $ft-text;
-    margin-bottom: 20px;
-  }
 
   %modal-input {
     border: 1px solid rgba(33, 33, 33, 0.2);

@@ -1,20 +1,16 @@
 /*portfolio_cards*/
 .portfolio {
   &__container {
-    @extend %flex-align;
+    @extend %mobile-flex;
     flex-direction: column;
   }
 }
 
 .portfolio-cards {
   margin-top: -30px;
-  margin-left: -30px;
-  flex-wrap: wrap;
 
   &__list {
-    flex-basis: calc(100% / 3 - 30px);
     margin-top: 30px;
-    margin-left: 30px;
   }
 }
 
@@ -23,6 +19,11 @@
   &__image-box {
     position: relative;
     overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 294px;
   }
 
   &__info {
@@ -59,7 +60,7 @@
   opacity: 0;
   bottom: -100%;
   pointer-events: none;
-  @extend %flex-align;
+  @extend %mobile-flex;
 
   &__text {
     padding: 0 24px;
@@ -73,4 +74,23 @@
     opacity: 1;
     transform: translateY(-100%);
   }
+}
+
+@media screen and (min-width: $tablet){
+  .portfolio-cards {
+    margin-left: -30px;
+    flex-wrap: wrap;
+    &__list {
+     flex-basis: calc(100% / 2 - 30px); 
+     margin-left: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop){
+    .portfolio-cards {
+      &__list {
+      flex-basis: calc(100% / 3 - 30px); 
+      }
+    }
 }

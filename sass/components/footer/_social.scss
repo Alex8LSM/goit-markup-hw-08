@@ -1,13 +1,14 @@
 /*footer_social*/
-@media screen and (min-width: $desktop){
   .social-container {
-    width: 206px;
+    // width: 206px;
     height: 80px;
-    margin: 15px 93px 0px 70px;
+    margin-top: 60px;
 
     &__title {
-      // @extend %up-case-title;
+      @extend %up-case-title;
       @extend %footer-title;
+      color: $hero-text;
+      margin-bottom: 20px;
     }
 
     &__icon {
@@ -17,5 +18,19 @@
     &__social-icon {
       fill: $hero-text;
     }
+  }
+
+@media screen and (min-width: $tablet){
+  .social-container {
+    margin-top: 5px;
+    margin-left: 165px;
+  }
+}
+
+@media screen and (min-width: $desktop){
+  .social-container {
+    margin-top: 12px;
+    margin-left: 70px;
+    align-items: start;
   }
 }

@@ -1,5 +1,27 @@
 /*footer-adress*/
 
+
+.footer-box, .footer-brand, address, .social-container, .subscribe-form {
+
+  @extend %mobile-flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: $ter-section-bgc;
+  
+  &__container {
+    @extend %mobile-flex;
+    flex-direction: column;
+    
+  }
+  
+  &__link {
+    @extend %focus_hover;
+    color: $footer-contacts;
+  }
+}
+
 .footer-brand {
   @extend %brand;
   &__color-one {
@@ -10,37 +32,48 @@
   }
 }
 
+.address {
+  margin-top: 20px;
+  width: 232px;
+
+  &__text {
+    color: $ft-text;
+    font-style: normal;
+
+    text-align: center;
+  }
+
+  &__list-box {
+    color: $footer-contacts;
+    font-style: normal;
+  
+  }
+
+  &__list {
+    margin-top: 9px;
+  }
+}
+
+@media screen and (min-width: $tablet){
+
+  .footer-box {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
 @media screen and (min-width: $desktop){
-  .footer {
-    padding: 60px 0;
-    background-color: $ter-section-bgc;
-
-    &__container {
-      display: flex;
-    }
-
-    &__link {
-      @extend %focus_hover;
-    }
+.footer {
+  padding: 60px 0;
+  &__container {
+    flex-direction: row;
+    align-items: flex-start;
   }
-
-
-  .address {
-    margin-top: 20px;
-    width: 231px;
-
-    &__text {
-      color: $ft-text;
-      font-style: normal;
-    }
-
-    &__list-box {
-      color: $footer-contacts;
-      font-style: normal;
-    }
-
-    &__list {
-      margin-top: 9px;
-    }
+  &-brand {
+    align-items: flex-start;
   }
+}
+ .address {
+   align-items: flex-start;
+ }
 }

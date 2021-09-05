@@ -24,7 +24,7 @@
           ><span class="header-brand__color-two">Studio</span>
         </a>
         <nav class="upper-line__nav-links">
-          <ul class="upper-line__list-box">
+          <ul class="upper-line__list-box flex-list">
             <li class="upper-line__list upper-line__list--nav">
               <a class="link upper-line__link" href="./index.html"
                 >Студия</a
@@ -38,9 +38,9 @@
             </li>
           </ul>
         </nav>
-        <ul class="upper-line__list-box">
-          <li class="upper-line__list upper-line__list--contacts">
-            <a class="upper-line__link" href="mailto:info@devstudio.com">
+        <ul class="upper-line__contact-box">
+          <li class="upper-line__list upper-line__list--mail">
+            <a class="upper-line__link upper-line__link--contacts" href="mailto:info@devstudio.com">
               <svg class="upper-line__email-icon" width="16px" height="12px">
                 <use href="./images/icons.svg#email"></use>
               </svg>
@@ -48,8 +48,8 @@
             </a>
           </li>
 
-          <li class="upper-line__list upper-line__list--contacts">
-            <a class="upper-line__link" href="tel:+380961111111">
+          <li class="upper-line__list upper-line__list--phone">
+            <a class="upper-line__link upper-line__link--contacts" href="tel:+380961111111">
               <svg class="upper-line__phone-icon" width="10px" height="16px">
                 <use href="./images/icons.svg#phone"></use>
               </svg>
@@ -121,7 +121,7 @@
             </li>
           </ul>
 
-          <ul class="list-box portfolio-cards">
+          <ul class="flex-list portfolio-cards">
             <li class="list portfolio-cards__list">
               <a href="#" class="link portfolio-card">
                 <div class="portfolio-card__image-box">
@@ -132,7 +132,7 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <img class="portfolio-card__image"
                     src="./images/tehno.jpg"
                     width="370"
                     height="294"
@@ -152,7 +152,7 @@
                   <div class="overlay">
                     <p class="overlay__text">Постер New Orlean vs Golden Star это ...</p>
                   </div>
-                  <img
+                  <img class="portfolio-card__image"
                     src="./images/poster.jpg"
                     width="370"
                     height="294"
@@ -172,7 +172,7 @@
                   <div class="overlay">
                     <p class="overlay__text">Ресторан Seafood это ...</p>
                   </div>
-                  <img
+                  <img class="portfolio-card__image"
                     src="./images/restaurant.jpg"
                     width="370"
                     height="294"
@@ -192,7 +192,7 @@
                   <div class="overlay">
                     <p class="overlay__text">Проект Prime это ...</p>
                   </div>
-                  <img
+                  <img class="portfolio-card__image"
                     src="./images/prime.jpg"
                     width="370"
                     height="294"
@@ -212,7 +212,7 @@
                   <div class="overlay">
                     <p class="overlay__text">Проект Boxes это ...</p>
                   </div>
-                  <img
+                  <img class="portfolio-card__image"
                     src="./images/boxes.jpg"
                     width="370"
                     height="294"
@@ -232,7 +232,7 @@
                   <div class="overlay">
                     <p class="overlay__text">Inspiration has no Borders это ...</p>
                   </div>
-                  <img
+                  <img class="portfolio-card__image"
                     src="./images/Inspiration.jpg"
                     width="370"
                     height="294"
@@ -252,7 +252,7 @@
                   <div class="overlay">
                     <p class="overlay__text">Издание Limited Edition это ...</p>
                   </div>
-                  <img
+                  <img class="portfolio-card__image"
                     src="./images/edition.jpg"
                     width="370"
                     height="294"
@@ -272,7 +272,7 @@
                   <div class="overlay">
                     <p class="overlay__text">Проект LAB это ...</p>
                   </div>
-                  <img src="./images/lab.jpg" width="370" height="294" alt="Эмблема проэкта" />
+                  <img class="portfolio-card__image" src="./images/lab.jpg" width="370" height="294" alt="Эмблема проэкта" />
                 </div>
                 <div class="portfolio-card__info">
                   <h3 class="portfolio-card__title">Проект LAB</h3>
@@ -287,7 +287,7 @@
                   <div class="overlay">
                     <p class="overlay__text">Growing Business это ...</p>
                   </div>
-                  <img
+                  <img class="portfolio-card__image"
                     src="./images/business.jpg"
                     width="370"
                     height="294"
@@ -305,56 +305,57 @@
       </section>
     </main>
 
-    <!-- Футер -->
-    <footer class="footer">
+  <!-- Футер -->
+    <footer class="footer section">
       <div class="container footer__container">
-        <div class="logo-container">
-          <div class="footer-brand">
-            <a class="" href="./index.html">
-              <span class="footer-brand__color-one">Web</span
-              ><span class="footer-brand__color-two">Studio</span>
-            </a>
+        <div class="footer-box">
+          <div class="footer-block">
+            <div class="footer-brand">
+              <a class="" href="./index.html">
+                <span class="footer-brand__color-one">Web</span
+                ><span class="footer-brand__color-two">Studio</span>
+              </a>
+            </div>
+            <address class="address">
+              <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
+              <ul class="address__list-box">
+                <li class="address__list">
+                  <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
+                </li>
+
+                <li class="address__list">
+                  <a class="footer__link" href="tel:+380991111111">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
           </div>
-          <address class="address">
-            <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="address__list-box">
-              <li class="address__list">
-                <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
+          <div class="social-container">
+            <h3 class="social-container__title">присоединяйтесь</h3>
+            <ul class="list-box social-icons">
+              <li class="list social-icons__list">
+                <a href="#" class="link social-container__icon social-icons__icon">
+                  <svg class="social-container__social-icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-
-              <li class="address__list">
-                <a class="footer__link" href="tel:+380991111111">+38 099 111 11 11</a>
+              
+              <li class="list social-icons__list">
+                <a href="#" class="link social-container__icon social-icons__icon">
+                  <svg class="social-container__social-icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-            </ul>
-          </address>
-        </div>
-        <div class="social-container">
-          <h3 class="social-container__title">присоединяйтесь</h3>
-          <ul class="list-box social-icons">
-            <li class="list social-icons__list">
-              <a href="#" class="link social-container__icon social-icons__icon">
-                <svg class="social-container__social-icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="list social-icons__list">
-              <a href="#" class="link social-container__icon social-icons__icon">
-                <svg class="social-container__social-icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="list social-icons__list">
-              <a href="#" class="link social-container__icon social-icons__icon">
-                <svg class="social-container__social-icon" width="20px" height="20px">
+              
+              <li class="list social-icons__list">
+                <a href="#" class="link social-container__icon social-icons__icon">
+                  <svg class="social-container__social-icon" width="20px" height="20px">
                   <use href="./images/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
-
+            
             <li class="list social-icons__list">
               <a href="#" class="link social-container__icon social-icons__icon">
                 <svg class="social-container__social-icon" width="20px" height="20px">
@@ -364,9 +365,10 @@
             </li>
           </ul>
         </div>
-
+      </div>
+        
         <form class="subscribe-form">
-          <label>
+          <label class="subscribe-form__label">
             <span class="subscribe-form__title">Подпишитесь на рассылку</span>
             <input class="subscribe-form__email" type="email" name="email" placeholder="E-mail" />
           </label>

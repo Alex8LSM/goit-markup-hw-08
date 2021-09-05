@@ -1,17 +1,16 @@
 /*index_our-works*/
-@media screen and (max-width: $mobile-max) {
+@media screen and (max-width: $tablet-max) {
   .our-works {
    display: none;
   }
 }
 
-@media screen and (min-width: $desktop) {
   .our-works {
     &--geometry {
       padding-top: 0px;
     }
     &__first-title {
-      // @extend %first-title;
+      @extend %first-title;
     }
 
     &__work {
@@ -32,10 +31,11 @@
     &__title {
       text-transform: uppercase;
       color: $hero-text;
+      font-size: 14px;
+      line-height: 1.172;
     }
 
     &__work {
       position: relative;
     }
   }
-}
