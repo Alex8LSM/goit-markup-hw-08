@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-  <!-- Верхняя линия -->
+    <!-- Верхняя линия -->
     <header class="upper-line">
       <div class="container upper-line__container">
         <a class="link header-brand" href="./index.html">
@@ -26,12 +26,12 @@
         <nav class="upper-line__nav-links">
           <ul class="upper-line__list-box flex-list">
             <li class="upper-line__list upper-line__list--nav">
-              <a class="link upper-line__link" href="./index.html"
-                >Студия</a
-              >
+              <a class="link upper-line__link" href="./index.html">Студия</a>
             </li>
             <li class="upper-line__list upper-line__list--nav">
-              <a class="link upper-line__link upper-line__active-page" href="./portfolio.html">Портфолио</a>
+              <a class="link upper-line__link upper-line__active-page" href="./portfolio.html"
+                >Портфолио</a
+              >
             </li>
             <li class="upper-line__list upper-line__list--nav">
               <a class="link upper-line__link" href="#">Контакты</a>
@@ -58,41 +58,63 @@
           </li>
         </ul>
 
-        <button class="mobile-menu__btn mobile-menu__open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-           <svg class="mobile-menu__icon mobile-menu__open-icon" width="40px" height="40px">
-                <use href="./images/icons.svg#icon-menu-open"></use>
-           </svg>
+        <button
+          class="mobile-menu__btn mobile-menu__open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu__icon mobile-menu__open-icon" width="40px" height="40px">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
         </button>
 
         <div class="mobile-menu__container js-menu-container" id="mobile-menu">
           <button class="mobile-menu__btn mobile-menu__close js-close-menu">
-             <svg class="mobile-menu__icon mobile-menu__close-icon" width="40px" height="40px">
-                <use href="./images/icons.svg#icon-menu-close"></use>
-           </svg>
+            <svg class="mobile-menu__icon mobile-menu__close-icon" width="40px" height="40px">
+              <use href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
           </button>
           <nav class="mobile-menu__nav">
             <ul class="navigation">
-              <li class="navigation__list"><a href="./index.html" class="link navigation__link">Студия</a></li>
-              <li class="navigation__list"><a href="./portfolio.html" class="link navigation__link navigation__active-page">Портфолио</a></li>
-              <li class="navigation__list"><a href="#" class="link navigation__link">Контакты</a></li>
+              <li class="navigation__list">
+                <a href="./index.html" class="link navigation__link">Студия</a>
+              </li>
+              <li class="navigation__list">
+                <a href="./portfolio.html" class="link navigation__link navigation__active-page"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigation__list">
+                <a href="#" class="link navigation__link">Контакты</a>
+              </li>
             </ul>
           </nav>
 
           <div class="mobile-menu__contacts">
-
             <ul class="mobile-menu__contacts">
-              <li class="mobile-menu__list"><a href="" class="link mobile-menu__phone">+38 096 111 11 11</a></li>
-              <li class="mobile-menu__list"><a href="" class="link mobile-menu__mail">info@devstudio.com</a></li>
+              <li class="mobile-menu__list">
+                <a href="" class="link mobile-menu__phone">+38 096 111 11 11</a>
+              </li>
+              <li class="mobile-menu__list">
+                <a href="" class="link mobile-menu__mail">info@devstudio.com</a>
+              </li>
             </ul>
-            
+
             <ul class="social-menu">
-              <li class="social-menu__list"><a href="" class="link social-menu__link">Instagram</a></li>
-              <li class="social-menu__list"><a href="" class="link social-menu__link">Twitter</a></li>
-              <li class="social-menu__list"><a href="" class="link social-menu__link">Facebook</a></li>
-              <li class="social-menu__list"><a href="" class="link social-menu__link">LinkedIn</a></li>
+              <li class="social-menu__list">
+                <a href="" class="link social-menu__link">Instagram</a>
+              </li>
+              <li class="social-menu__list">
+                <a href="" class="link social-menu__link">Twitter</a>
+              </li>
+              <li class="social-menu__list">
+                <a href="" class="link social-menu__link">Facebook</a>
+              </li>
+              <li class="social-menu__list">
+                <a href="" class="link social-menu__link">LinkedIn</a>
+              </li>
             </ul>
           </div>
-
         </div>
       </div>
     </header>
@@ -132,9 +154,11 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img class="portfolio-card__image"
-                    src="./images/tehno.jpg"
-                    width="370"
+                  <img
+                    class="portfolio-card__image"
+                    srcset="./images/tehno_m@2x.jpg 2x"
+                    src="./images/tehno_m.jpg"
+                    width="450"
                     height="294"
                     alt="Внешний вид веб сайта"
                   />
@@ -152,9 +176,11 @@
                   <div class="overlay">
                     <p class="overlay__text">Постер New Orlean vs Golden Star это ...</p>
                   </div>
-                  <img class="portfolio-card__image"
-                    src="./images/poster.jpg"
-                    width="370"
+                  <img
+                    class="portfolio-card__image"
+                    srcset="./images/poster_m@2x.jpg 2x"
+                    src="./images/poster_m.jpg"
+                    width="450"
                     height="294"
                     alt="Постер с баскетболистами"
                   />
@@ -172,9 +198,11 @@
                   <div class="overlay">
                     <p class="overlay__text">Ресторан Seafood это ...</p>
                   </div>
-                  <img class="portfolio-card__image"
-                    src="./images/restaurant.jpg"
-                    width="370"
+                  <img
+                    class="portfolio-card__image"
+                    srcset="./images/restaurant_m@2x.jpg 2x"
+                    src="./images/restaurant_m.jpg"
+                    width="450"
                     height="294"
                     alt="Ємблема ресторана"
                   />
@@ -192,9 +220,11 @@
                   <div class="overlay">
                     <p class="overlay__text">Проект Prime это ...</p>
                   </div>
-                  <img class="portfolio-card__image"
-                    src="./images/prime.jpg"
-                    width="370"
+                  <img
+                    class="portfolio-card__image"
+                    srcset="./images/prime_m@2x.jpg 2x"
+                    src="./images/prime_m.jpg"
+                    width="450"
                     height="294"
                     alt="Изображение с Наушниками"
                   />
@@ -212,9 +242,11 @@
                   <div class="overlay">
                     <p class="overlay__text">Проект Boxes это ...</p>
                   </div>
-                  <img class="portfolio-card__image"
-                    src="./images/boxes.jpg"
-                    width="370"
+                  <img
+                    class="portfolio-card__image"
+                    srcset="./images/boxes_m@2x.jpg 2x"
+                    src="./images/boxes_m.jpg"
+                    width="450"
                     height="294"
                     alt="Изображение с коробками"
                   />
@@ -232,9 +264,11 @@
                   <div class="overlay">
                     <p class="overlay__text">Inspiration has no Borders это ...</p>
                   </div>
-                  <img class="portfolio-card__image"
-                    src="./images/Inspiration.jpg"
-                    width="370"
+                  <img
+                    class="portfolio-card__image"
+                    srcset="./images/inspiration_m@2x.jpg 2x"
+                    src="./images/inspiration_m.jpg"
+                    width="450"
                     height="294"
                     alt="Внешний вид веб сайта"
                   />
@@ -252,9 +286,11 @@
                   <div class="overlay">
                     <p class="overlay__text">Издание Limited Edition это ...</p>
                   </div>
-                  <img class="portfolio-card__image"
-                    src="./images/edition.jpg"
-                    width="370"
+                  <img
+                    class="portfolio-card__image"
+                    srcset="./images/edition_m@2x.jpg 2x"
+                    src="./images/edition_m.jpg"
+                    width="450"
                     height="294"
                     alt="Изображение журнала"
                   />
@@ -272,7 +308,14 @@
                   <div class="overlay">
                     <p class="overlay__text">Проект LAB это ...</p>
                   </div>
-                  <img class="portfolio-card__image" src="./images/lab.jpg" width="370" height="294" alt="Эмблема проэкта" />
+                  <img
+                    class="portfolio-card__image"
+                    srcset="./images/lab_m@2x.jpg 2x"
+                    src="./images/lab_m.jpg"
+                    width="450"
+                    height="294"
+                    alt="Эмблема проэкта"
+                  />
                 </div>
                 <div class="portfolio-card__info">
                   <h3 class="portfolio-card__title">Проект LAB</h3>
@@ -287,9 +330,11 @@
                   <div class="overlay">
                     <p class="overlay__text">Growing Business это ...</p>
                   </div>
-                  <img class="portfolio-card__image"
-                    src="./images/business.jpg"
-                    width="370"
+                  <img
+                    class="portfolio-card__image"
+                    srcset="./images/business_m@2x.jpg 2x"
+                    src="./images/business_m.jpg"
+                    width="450"
                     height="294"
                     alt="Ноутбук с приложением"
                   />
@@ -305,7 +350,7 @@
       </section>
     </main>
 
-  <!-- Футер -->
+    <!-- Футер -->
     <footer class="footer section">
       <div class="container footer__container">
         <div class="footer-box">
@@ -339,7 +384,7 @@
                   </svg>
                 </a>
               </li>
-              
+
               <li class="list social-icons__list">
                 <a href="#" class="link social-container__icon social-icons__icon">
                   <svg class="social-container__social-icon" width="20px" height="20px">
@@ -347,26 +392,26 @@
                   </svg>
                 </a>
               </li>
-              
+
               <li class="list social-icons__list">
                 <a href="#" class="link social-container__icon social-icons__icon">
                   <svg class="social-container__social-icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            
-            <li class="list social-icons__list">
-              <a href="#" class="link social-container__icon social-icons__icon">
-                <svg class="social-container__social-icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="list social-icons__list">
+                <a href="#" class="link social-container__icon social-icons__icon">
+                  <svg class="social-container__social-icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-        
+
         <form class="subscribe-form">
           <label class="subscribe-form__label">
             <span class="subscribe-form__title">Подпишитесь на рассылку</span>

@@ -58,41 +58,63 @@
           </li>
         </ul>
 
-        <button class="mobile-menu__btn mobile-menu__open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-           <svg class="mobile-menu__icon mobile-menu__open-icon" width="40px" height="40px">
-                <use href="./images/icons.svg#icon-menu-open"></use>
-           </svg>
+        <button
+          class="mobile-menu__btn mobile-menu__open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu__icon mobile-menu__open-icon" width="40px" height="40px">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
         </button>
 
         <div class="mobile-menu__container js-menu-container" id="mobile-menu">
           <button class="mobile-menu__btn mobile-menu__close js-close-menu">
-             <svg class="mobile-menu__icon mobile-menu__close-icon" width="40px" height="40px">
-                <use href="./images/icons.svg#icon-menu-close"></use>
-           </svg>
+            <svg class="mobile-menu__icon mobile-menu__close-icon" width="40px" height="40px">
+              <use href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
           </button>
           <nav class="mobile-menu__nav">
             <ul class="navigation">
-              <li class="navigation__list"><a href="./index.html" class="link navigation__link navigation__active-page">Студия</a></li>
-              <li class="navigation__list"><a href="./portfolio.html" class="link navigation__link">Портфолио</a></li>
-              <li class="navigation__list"><a href="#" class="link navigation__link">Контакты</a></li>
+              <li class="navigation__list">
+                <a href="./index.html" class="link navigation__link navigation__active-page"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigation__list">
+                <a href="./portfolio.html" class="link navigation__link">Портфолио</a>
+              </li>
+              <li class="navigation__list">
+                <a href="#" class="link navigation__link">Контакты</a>
+              </li>
             </ul>
           </nav>
 
           <div class="mobile-menu__contacts">
-
             <ul class="mobile-menu__contacts">
-              <li class="mobile-menu__list"><a href="" class="link mobile-menu__phone">+38 096 111 11 11</a></li>
-              <li class="mobile-menu__list"><a href="" class="link mobile-menu__mail">info@devstudio.com</a></li>
+              <li class="mobile-menu__list">
+                <a href="" class="link mobile-menu__phone">+38 096 111 11 11</a>
+              </li>
+              <li class="mobile-menu__list">
+                <a href="" class="link mobile-menu__mail">info@devstudio.com</a>
+              </li>
             </ul>
-            
+
             <ul class="social-menu">
-              <li class="social-menu__list"><a href="" class="link social-menu__link">Instagram</a></li>
-              <li class="social-menu__list"><a href="" class="link social-menu__link">Twitter</a></li>
-              <li class="social-menu__list"><a href="" class="link social-menu__link">Facebook</a></li>
-              <li class="social-menu__list"><a href="" class="link social-menu__link">LinkedIn</a></li>
+              <li class="social-menu__list">
+                <a href="" class="link social-menu__link">Instagram</a>
+              </li>
+              <li class="social-menu__list">
+                <a href="" class="link social-menu__link">Twitter</a>
+              </li>
+              <li class="social-menu__list">
+                <a href="" class="link social-menu__link">Facebook</a>
+              </li>
+              <li class="social-menu__list">
+                <a href="" class="link social-menu__link">LinkedIn</a>
+              </li>
             </ul>
           </div>
-
         </div>
       </div>
     </header>
@@ -168,7 +190,13 @@
           <ul class="flex-list">
             <li class="our-works__work">
               <a class="link" href="#">
-                <img src="./images/work1.jpg" width="370" height="294" alt="Изображение работы 1" />
+                <img
+                  srcset="./images/work1@2x.jpg 2x"
+                  src="./images/work1.jpg"
+                  width="370"
+                  height="294"
+                  alt="Изображение работы 1"
+                />
                 <div class="our-works__label">
                   <h3 class="our-works__title">Десктопные приложения</h3>
                 </div>
@@ -177,7 +205,13 @@
 
             <li class="our-works__work">
               <a class="link" href="#">
-                <img src="./images/work2.jpg" width="370" height="294" alt="Изображение работы 2" />
+                <img
+                  srcset="./images/work2@2x.jpg 2x"
+                  src="./images/work2.jpg"
+                  width="370"
+                  height="294"
+                  alt="Изображение работы 2"
+                />
                 <div class="our-works__label">
                   <h3 class="our-works__title">Мобильные приложения</h3>
                 </div>
@@ -186,7 +220,13 @@
 
             <li class="our-works__work">
               <a class="link" href="#">
-                <img src="./images/work3.jpg" width="370" height="294" alt="Изображение работы 3" />
+                <img
+                  srcset="./images/work3@2x.jpg 2x"
+                  src="./images/work3.jpg"
+                  width="370"
+                  height="294"
+                  alt="Изображение работы 3"
+                />
                 <div class="our-works__label">
                   <h3 class="our-works__title">Дизайнерские решения</h3>
                 </div>
@@ -202,10 +242,12 @@
           <h2 class="our-team__first-title">Наша команда</h2>
           <ul class="list-box team-cards">
             <li class="team-cards__card">
-              <img class="team-cards__image"
-                src="./images/member1.jpg"
-                width="270"
-                height="260"
+              <img
+                class="team-cards__image"
+                srcset="./images/member1_m@2x.jpg 2x"
+                src="./images/member1_m.jpg"
+                width="450"
+                height="294"
                 alt="Фото Игоря Демьяненко"
               />
               <div class="team-card">
@@ -248,7 +290,14 @@
             </li>
 
             <li class="team-cards__card">
-              <img class="team-cards__image" src="./images/member2.jpg" width="270" height="260" alt="Фото Ольги Репиной" />
+              <img
+                class="team-cards__image"
+                srcset="./images/member2_m@2x.jpg 2x"
+                src="./images/member2_m.jpg"
+                width="450"
+                height="294"
+                alt="Фото Ольги Репиной"
+              />
               <div class="team-card">
                 <h3 class="team-card__title">Ольга Репина</h3>
                 <p class="team-card__profession">Frontend Developer</p>
@@ -289,10 +338,12 @@
             </li>
 
             <li class="team-cards__card">
-              <img class="team-cards__image"
-                src="./images/member3.jpg"
-                width="270"
-                height="260"
+              <img
+                class="team-cards__image"
+                srcset="./images/member3_m@2x.jpg 2x"
+                src="./images/member3_m.jpg"
+                width="450"
+                height="294"
                 alt="Фото Николая Тарасова"
               />
               <div class="team-card">
@@ -335,10 +386,12 @@
             </li>
 
             <li class="team-cards__card">
-              <img class="team-cards__image"
-                src="./images/member4.jpg"
-                width="270"
-                height="260"
+              <img
+                class="team-cards__image"
+                srcset="./images/member4_m@2x.jpg 2x"
+                src="./images/member4_m.jpg"
+                width="450"
+                height="294"
                 alt="Фото Михаила Ермакова"
               />
               <div class="team-card">
@@ -546,7 +599,7 @@
                   </svg>
                 </a>
               </li>
-              
+
               <li class="list social-icons__list">
                 <a href="#" class="link social-container__icon social-icons__icon">
                   <svg class="social-container__social-icon" width="20px" height="20px">
@@ -554,26 +607,26 @@
                   </svg>
                 </a>
               </li>
-              
+
               <li class="list social-icons__list">
                 <a href="#" class="link social-container__icon social-icons__icon">
                   <svg class="social-container__social-icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            
-            <li class="list social-icons__list">
-              <a href="#" class="link social-container__icon social-icons__icon">
-                <svg class="social-container__social-icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="list social-icons__list">
+                <a href="#" class="link social-container__icon social-icons__icon">
+                  <svg class="social-container__social-icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-        
+
         <form class="subscribe-form">
           <label class="subscribe-form__label">
             <span class="subscribe-form__title">Подпишитесь на рассылку</span>
