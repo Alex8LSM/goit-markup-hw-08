@@ -116,7 +116,7 @@ body {
   }
 }
 
-.social-icons, .upper-line__container, .footer-box, .footer-brand, address, .social-container, .subscribe-form, .footer__container, .subscribe-form__label, .cap__container, .our-features__box, .company-label, .portfolio__container, .overlay {
+.social-icons, .upper-line__container, .footer-box, .footer-brand, address, .social-container, .subscribe-form, .footer__container, .subscribe-form__label, .cap__container, .our-features__box, .company-label, .contact-form, .contact-form__close-btn, .check-block, .portfolio__container, .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,9 +208,76 @@ body {
   color: #2196f3;
 }
 
+.form-field__input, .form-field__comment {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  position: relative;
+  display: block;
+}
+
 .social-container__title, .subscribe-form__title {
   color: #ffffff;
   margin-bottom: 20px;
+}
+
+/*Animation placeholders*/
+.upper-line__link, .footer__link, .subscribe-form__email::-webkit-input-placeholder, .form-field__comment::-webkit-input-placeholder {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.upper-line__link, .footer__link, .subscribe-form__email:-ms-input-placeholder, .form-field__comment:-ms-input-placeholder {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.upper-line__link, .footer__link, .subscribe-form__email::-ms-input-placeholder, .form-field__comment::-ms-input-placeholder {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.upper-line__link, .footer__link, .subscribe-form__email::placeholder, .form-field__comment::placeholder {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cap__order-btn, .social-icons__icon, .subscribe-form__btn, .contact-form__send-btn {
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.company-label, .subscribe-form__email, .form-field__input, .form-field__comment {
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card__social-icon, .company-label__icon, .contact-form__close-icon, .form-field__form-icon, .check-block__checked-icon, .check-block__unchecked-icon {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card {
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filters__filter-btn {
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay {
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop {
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*max-width: $mobile-max*/
@@ -236,64 +303,6 @@ body {
   }
   .upper-line__link:focus, .footer__link:focus, .upper-line__link:hover, .footer__link:hover {
     color: #2196f3;
-  }
-  .form-field__input, .form-field__comment {
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    margin-top: 4px;
-    position: relative;
-    display: block;
-  }
-  /*Animation placeholders*/
-  .upper-line__link, .footer__link, .subscribe-form__email::-webkit-input-placeholder, .form-field__comment::-webkit-input-placeholder {
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .upper-line__link, .footer__link, .subscribe-form__email:-ms-input-placeholder, .form-field__comment:-ms-input-placeholder {
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .upper-line__link, .footer__link, .subscribe-form__email::-ms-input-placeholder, .form-field__comment::-ms-input-placeholder {
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .upper-line__link, .footer__link, .subscribe-form__email::placeholder, .form-field__comment::placeholder {
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .cap__order-btn, .social-icons__icon, .subscribe-form__btn, .contact-form__send-btn {
-    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .company-label, .subscribe-form__email, .form-field__input, .form-field__comment {
-    -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .team-card__social-icon, .company-label__icon, .contact-form__close-icon, .form-field__form-icon, .check-block__checked-icon, .check-block__unchecked-icon {
-    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .portfolio-card {
-    -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .filters__filter-btn {
-    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .overlay {
-    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .backdrop {
-    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -815,38 +824,37 @@ body {
 }
 
 /*index_our-works*/
-@media screen and (max-width: 1199px) {
+.our-works {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
   .our-works {
-    display: none;
+    display: block;
   }
-}
-
-.our-works--geometry {
-  padding-top: 0px;
-}
-
-.our-works__work:not(:first-child) {
-  margin-left: 30px;
-}
-
-.our-works__label {
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  background-color: rgba(47, 48, 58, 0.8);
-  padding: 27px 0px;
-  text-align: center;
-}
-
-.our-works__title {
-  text-transform: uppercase;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.172;
-}
-
-.our-works__work {
-  position: relative;
+  .our-works--geometry {
+    padding-top: 0px;
+  }
+  .our-works__work:not(:first-child) {
+    margin-left: 30px;
+  }
+  .our-works__label {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(47, 48, 58, 0.8);
+    padding: 27px 0px;
+    text-align: center;
+  }
+  .our-works__title {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.172;
+  }
+  .our-works__work {
+    position: relative;
+  }
 }
 
 /*index_our-team*/
@@ -856,11 +864,9 @@ body {
 
 .team-cards {
   margin-bottom: -30px;
-  outline: 1px solid blue;
 }
 
 .team-cards__card {
-  outline: 1px solid green;
   margin-bottom: 30px;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
@@ -1007,7 +1013,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
+  max-width: 100vw;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1035,10 +1041,16 @@ body {
 
 .contact-form__title {
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 12px;
   font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form__title {
+    line-height: 1.15;
+  }
 }
 
 .contact-form__close-icon {
@@ -1058,9 +1070,15 @@ body {
 }
 
 .form-field__input {
-  width: 448px;
+  width: 370px;
   height: 40px;
   padding: 0 0 0 42px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-field__input {
+    width: 448px;
+  }
 }
 
 .form-field--name, .form-field--phone, .form-field--mail {
@@ -1084,7 +1102,7 @@ body {
 }
 
 .form-field__comment {
-  width: 448px;
+  width: 370px;
   height: 120px;
   font-size: 14px;
   line-height: 1.143;
@@ -1092,6 +1110,12 @@ body {
   margin: 0;
   padding: 12px 16px;
   resize: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-field__comment {
+    width: 448px;
+  }
 }
 
 .form-field__comment::-webkit-input-placeholder {
@@ -1116,11 +1140,20 @@ body {
           justify-content: center;
   position: relative;
   margin-bottom: 30px;
+  outline: 1px solid blue;
 }
 
 .check-block__agreement {
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   padding-left: 23px;
+}
+
+@media screen and (min-width: 1200px) {
+  .check-block__agreement {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .check-block__agreement:hover {
@@ -1133,9 +1166,15 @@ body {
 
 .check-block__checked-icon, .check-block__unchecked-icon {
   left: 0px;
-  top: 4px;
+  top: 0px;
   position: absolute;
   pointer-events: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .check-block__checked-icon, .check-block__unchecked-icon {
+    top: 4px;
+  }
 }
 
 .check-block__checkbox:checked ~ .check-block__checked-icon, .check-block__checkbox:checked ~ .check-block__unchecked-icon {
@@ -1214,10 +1253,13 @@ body {
 
 .portfolio-cards {
   margin-top: -30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .portfolio-cards__list {
   margin-top: 30px;
+  width: 100%;
 }
 
 .portfolio-card {
@@ -1284,8 +1326,6 @@ body {
 @media screen and (min-width: 768px) {
   .portfolio-cards {
     margin-left: -30px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   .portfolio-cards__list {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);

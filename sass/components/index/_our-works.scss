@@ -1,16 +1,17 @@
 /*index_our-works*/
-@media screen and (max-width: $tablet-max) {
-  .our-works {
-   display: none;
+.our-works {
+  display: none;
+    &__first-title {
+    @extend %first-title;
   }
 }
 
+
+@media screen and (min-width: $desktop) {
   .our-works {
+    display: block;
     &--geometry {
       padding-top: 0px;
-    }
-    &__first-title {
-      @extend %first-title;
     }
 
     &__work {
@@ -39,3 +40,4 @@
       position: relative;
     }
   }
+}
