@@ -6,7 +6,7 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.714; /*24px*/
-  min-width: 320px;
+  min-width: $mobile-min;
 }
 
 .hidden {
@@ -23,14 +23,12 @@ body {
 .section {
     padding-top: 60px;
     padding-bottom: 60px;
-    // outline: 1px solid red;
   }
 
 .container {
   max-width: $mobile;
   padding: 0px 15px;
   margin: 0 auto;
-  // outline: 1px solid orange;
 }
 
 .our-features,
@@ -67,15 +65,10 @@ body {
   }
 
 @media screen and (min-width: $tablet){
-
   .container {
     max-width: $tablet;
   }
-
-
-
 }
-
 
 @media screen and (min-width: $desktop){
   .section {
